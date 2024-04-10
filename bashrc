@@ -25,6 +25,7 @@ alias dec='cal -m 12'
 
 
 #aliases for commonly used commands
+alias v="vim"
 alias off='shutdown now'
 alias cl='clear'
 alias h='history | fzf'
@@ -42,11 +43,12 @@ alias fixvivaldi="sudo find ~/ -type d -name GPUCache -exec rm -rf {} +"
 alias mnt="sudo mount /dev/sdb4 ./mounted"
 alias movies="sudo mount /dev/sdb4 ./mounted && cd ~/mounted/movies && lf"
 alias umnt="sudo umount /dev/sdb4 ./mounted"
-alias man="tldr"
 alias clock='tty-clock -cC 7 -f %d.%m.%y'
 alias yta='yt-dlp -x -f ba --embed-metadata --embed-thumbnail'
 alias aplay='mpv --no-video' 
-	    
+alias wifir="sudo systemctl stop NetworkManager && sudo systemctl start NetworkManager"
+alias myip="ip addr"	    
+
 # Git Shortcuts
 alias ga="git add"
 alias gc="git commit -m"
@@ -58,7 +60,7 @@ alias gcl="git clone"
 ####old
 
 alias ll="ls -lh"
-alias lll="ls -la"
+alias lll="ls -lah"
 alias lsdd="ls -ltr"
 alias lsh="ls -d .?*"
 #alias rm="rm -i"
@@ -68,6 +70,7 @@ alias down='cd ~/Downloads'
 alias cp='cp -iv'
 alias lsa='ls -a'
 alias lsd='ls -d */'
+alias :q="exit"
 
 #auto complete 
 
@@ -97,6 +100,7 @@ alias grep='grep --color=auto'
 alias lf="lfrun"
 alias xl="sudo libreoffice --calc"
 alias t="~/scripts/timerunning"
+alias root="sudo su"
 PS1='$(date +%H:%M)|\j|\W > '
 export PATH=$PATH:/home/latef/scripts/dwmbscripts
 export PATH=$PATH:/home/latef/scripts/
