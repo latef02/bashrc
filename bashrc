@@ -23,15 +23,19 @@ alias oct='cal -m 10'
 alias nov='cal -m 11'
 alias dec='cal -m 12'
 
-
+alias switch="~/scripts/audio-device-switch.sh"
+alias battery="~/scripts/batstat/batt"
 #aliases for commonly used commands
 alias v="vim"
+alias kmpv="killall mpv"
 alias off='shutdown now'
 alias cl='clear'
 alias h='history | fzf'
 alias df='df -h'
 alias free='free -m'
 alias scr="cd ~/scripts"
+alias dw="dwmblocks &"
+alias ps2="~/Downloads/pcsx2-v1.7.5600-linux-appimage-x64-Qt.AppImage"
 ####New add 
 alias wifils="nmcli dev wifi list"
 alias chat="hexchat"
@@ -101,7 +105,7 @@ alias lf="lfrun"
 alias xl="sudo libreoffice --calc"
 alias t="~/scripts/timerunning"
 alias root="sudo su"
-PS1='$(date +%H:%M)|\j|\W > '
+PS1='$(date +%H:%M)|\u|\j|\W > ' 
 export PATH=$PATH:/home/latef/scripts/dwmbscripts
 export PATH=$PATH:/home/latef/scripts/
 export GEM_HOME="$(ruby -e 'puts Gem.user_dir')"
@@ -113,11 +117,11 @@ export PATH="$PATH:$GEM_HOME/bin"
 
 
 
-
 HISTSIZE=20000
 HISTFILESIZE=20000
 
-set -o vi 
+#set -o vi 
+set -o emacs 
 
 
 #map f toggle_fullscreen
