@@ -2,6 +2,16 @@
 # ~/.bashrc
 #
 
+
+# _               _
+# | |__   __ _ ___| |__  _ __ ___
+# | '_ \ / _` / __| '_ \| '__/ __|
+#	 | |_) | (_| \__ \ | | | | 
+# |_.__/ \__,_|___/_| |_|_|  \___|
+
+
+
+
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
@@ -24,7 +34,7 @@ alias nov='cal -m 11'
 alias dec='cal -m 12'
 
 alias switch="~/scripts/audio-device-switch.sh"
-alias battery="~/scripts/batstat/batt"
+alias battery="~/scripts/batstats/batstat"
 #aliases for commonly used commands
 alias v="vim"
 alias kmpv="killall mpv"
@@ -71,10 +81,15 @@ alias lsh="ls -d .?*"
 #alias mv="mv -iv"
 alias desk='cd ~/Desktop'
 alias down='cd ~/Downloads'
+alias r='~/scripts/radio'
 alias cp='cp -iv'
 alias lsa='ls -a'
 alias lsd='ls -d */'
 alias :q="exit"
+alias wifir="sudo systemctl stop NetworkManager; sudo systemctl start NetworkManager"
+alias weather="curl wttr.in"
+
+alias fzfa='vim $(fzf -m --preview="bat --color=always {}")'
 
 #auto complete 
 
@@ -94,7 +109,6 @@ if [ -x /usr/bin/dircolors ]; then
 fi
 #
 #alias ls='ls --color=auto'
-alias freq='sudo auto-cpufreq --stats'
 alias pi='doas pacman -S'
 alias pr='doas pacman -R'
 alias pu='doas pacman -Syy && sudo pacman -Syu'
@@ -105,6 +119,8 @@ alias lf="lfrun"
 alias xl="sudo libreoffice --calc"
 alias t="~/scripts/timerunning"
 alias root="sudo su"
+alias read="zathura"
+alias lsr="ls -R"
 PS1='$(date +%H:%M)|\u|\j|\W > ' 
 export PATH=$PATH:/home/latef/scripts/dwmbscripts
 export PATH=$PATH:/home/latef/scripts/
