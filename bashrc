@@ -38,6 +38,7 @@ alias battery="~/scripts/batstats/batstat"
 #aliases for commonly used commands
 alias v="vim"
 alias kmpv="killall mpv"
+alias mkdir="mkdir -pv"
 alias off='shutdown now'
 alias cl='clear'
 alias h='history | fzf'
@@ -45,6 +46,7 @@ alias df='df -h'
 alias free='free -m'
 alias scr="cd ~/scripts"
 alias dw="dwmblocks &"
+alias dwk="killall dwmblocks && dwmblocks &"
 alias ps2="~/Downloads/pcsx2-v1.7.5600-linux-appimage-x64-Qt.AppImage"
 ####New add 
 alias wifils="nmcli dev wifi list"
@@ -54,6 +56,7 @@ alias empty-trash='sudo \rm -rf ~/.trash && mkdir ~/.trash'
 alias bashrcv="sudo vim ~/.bashrc"
 alias fim='vim $(fzf)'
 alias fixvivaldi="sudo find ~/ -type d -name GPUCache -exec rm -rf {} +"
+alias sx="less /home/latef/.config/sxhkd/sxhkdrc"
 alias mnt="sudo mount /dev/sdb4 ./mounted"
 alias movies="sudo mount /dev/sdb4 ./mounted && cd ~/mounted/movies && lf"
 alias umnt="sudo umount /dev/sdb4 ./mounted"
@@ -62,7 +65,7 @@ alias yta='yt-dlp -x -f ba --embed-metadata --embed-thumbnail'
 alias aplay='mpv --no-video' 
 alias wifir="sudo systemctl stop NetworkManager && sudo systemctl start NetworkManager"
 alias myip="ip addr"	    
-
+alias v="vim"
 # Git Shortcuts
 alias ga="git add"
 alias gc="git commit -m"
@@ -72,7 +75,7 @@ alias gcl="git clone"
 
 #alias "music"="ranger '/run/media/myuserid/Expansion/Videos/Music'"
 ####old
-
+alias ls='ls -hN --color=auto --group-directories-first'
 alias ll="ls -lh"
 alias lll="ls -lah"
 alias lsdd="ls -ltr"
@@ -102,7 +105,7 @@ alias fzfa='vim $(fzf -m --preview="bat --color=always {}")'
 # enable color support of ls and also add handy aliases
 if [ -x /usr/bin/dircolors ]; then
   test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
-  alias ls='ls  --color=auto'
+ # alias ls='ls  --color=auto'
   alias dir='dir --color=auto'
   alias vdir='vdir --color=auto'
 
@@ -133,8 +136,7 @@ export PATH="$PATH:$GEM_HOME/bin"
 
 
 
-HISTSIZE=20000
-HISTFILESIZE=20000
+HISTSIZE= HISTFILESIZE= # Infinite History
 
 #set -o vi 
 set -o emacs 
@@ -153,3 +155,4 @@ PERL5LIB="/home/latef/perl5/lib/perl5${PERL5LIB:+:${PERL5LIB}}"; export PERL5LIB
 PERL_LOCAL_LIB_ROOT="/home/latef/perl5${PERL_LOCAL_LIB_ROOT:+:${PERL_LOCAL_LIB_ROOT}}"; export PERL_LOCAL_LIB_ROOT;
 PERL_MB_OPT="--install_base \"/home/latef/perl5\""; export PERL_MB_OPT;
 PERL_MM_OPT="INSTALL_BASE=/home/latef/perl5"; export PERL_MM_OPT;
+eval "$(mcfly init bash)"
