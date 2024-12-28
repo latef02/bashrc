@@ -58,6 +58,7 @@ alias fim='vim $(fzf)'
 alias fixvivaldi="sudo find ~/ -type d -name GPUCache -exec rm -rf {} +"
 alias sx="less /home/latef/.config/sxhkd/sxhkdrc"
 alias mnt="sudo mount /dev/sdb4 ./mounted"
+alias pacq="pacman -Q | fzf"
 alias movies="sudo mount /dev/sdb4 ./mounted && cd ~/mounted/movies && lf"
 alias umnt="sudo umount /dev/sdb4 ./mounted"
 alias clock='tty-clock -cC 7 -f %d.%m.%y'
