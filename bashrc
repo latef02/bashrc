@@ -16,8 +16,6 @@
 [[ $- != *i* ]] && return
 
 
-export LANG
-
 
 #calender aliases
 alias jan='cal -m 01'
@@ -60,6 +58,7 @@ alias sx="less /home/latef/.config/sxhkd/sxhkdrc"
 alias mnt="sudo mount /dev/sdb4 ./mounted"
 alias pacq="pacman -Q | fzf"
 alias movies="sudo mount /dev/sdb4 ./mounted && cd ~/mounted/movies && lf"
+alias timer=" ~/scripts/shuttime.sh"
 alias umnt="sudo umount /dev/sdb4 ./mounted"
 alias clock='tty-clock -cC 7 -f %d.%m.%y'
 alias yta='yt-dlp -x -f ba --embed-metadata --embed-thumbnail'
@@ -92,7 +91,8 @@ alias lsd='ls -d */'
 alias :q="exit"
 alias wifir="sudo systemctl stop NetworkManager; sudo systemctl start NetworkManager"
 alias weather="curl wttr.in"
-
+alias task="cd ~/testgit && python3 task.py &"
+alias pomo="cd ~/testgit && python3 pomodor.py & "
 alias fzfa='vim $(fzf -m --preview="bat --color=always {}")'
 
 #auto complete 
@@ -111,7 +111,10 @@ if [ -x /usr/bin/dircolors ]; then
   alias vdir='vdir --color=auto'
 
 fi
-#
+#youtube on terminal 
+alias yt="yt-x --preview"
+
+
 #alias ls='ls --color=auto'
 alias pi='doas pacman -S'
 alias pr='doas pacman -R'
